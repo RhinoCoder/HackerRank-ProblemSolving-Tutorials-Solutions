@@ -361,6 +361,50 @@ public static int migratoryBirds(List<int> arr)
 
 #endregion
 
+#region Breaking-The-Records
+/*
+     * Complete the 'breakingRecords' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY scores as parameter.
+     
+
+public static List<int> breakingRecords(List<int> scores)
+{
+
+    int maxExceedCount = 0;
+    int minExceedCount = 0;
+    int currentRecord = scores[0];
+    int currentMinRecord = scores[0];
+    List<int> returningList = new List<int>();
+
+    for (int i = 0; i < scores.Count; i++)
+    {
+        if (scores[i] > currentRecord)
+        {
+            currentRecord = scores[i];
+            maxExceedCount++;
+        }
+
+        if (scores[i] < currentMinRecord)
+        {
+            currentMinRecord = scores[i];
+            minExceedCount++;
+        }
+
+    }
+
+    Console.WriteLine("Max: " + maxExceedCount);
+    Console.WriteLine("Min: " + minExceedCount);
+    returningList.Add(maxExceedCount);
+    returningList.Add(minExceedCount);
+    return returningList;
+
+
+}
+
+*/
+#endregion
 
 
 //Some of methods may become obsolete, I will be updating them through my program solving journey.
