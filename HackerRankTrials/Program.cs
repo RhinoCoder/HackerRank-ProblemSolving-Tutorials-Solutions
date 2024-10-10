@@ -242,8 +242,50 @@ public static List<int> gradingStudents(List<int> grades)
     */
 #endregion
 
+#region Bill Division
 
+///*
+//     * Complete the 'bonAppetit' function below.
+//     *
+//     * The function accepts following parameters:
+//     *  1. INTEGER_ARRAY bill
+//     *  2. INTEGER k
+//     *  3. INTEGER b
+//     */
  
+//public static void bonAppetit(List<int> bill, int k, int b)
+//{
+//    // K is index that anna did not eat.
+//    // b is the amount of money that Anna contributed to the bill
+
+//    int annaShouldPay = 0;
+
+//    for (int i = 0; i < bill.Count; i++)
+//    {
+//        if (k != i)
+//        {
+//            annaShouldPay += bill[i];
+//        }
+//    }
+//    annaShouldPay /= 2;
+
+//    if (annaShouldPay == b)
+//    {
+//        Console.WriteLine("Bon Appetit");
+//    }
+//    else
+//    {
+
+//        Console.WriteLine((b - annaShouldPay));
+//    }
+//    //Console.WriteLine("Anna Total Cost: " + annaShouldPay);        
+//}
+
+//}
+
+#endregion
+
+
 
 
 //Some of methods may become obsolete, I will be updating them through my program solving journey.
