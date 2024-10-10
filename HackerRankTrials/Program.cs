@@ -19,9 +19,9 @@ static class HackerRankTrials
     }
 
 
- 
 
-#region Day 0-Mean-Median-and-Mode
+
+    #region Day 0-Mean-Median-and-Mode
     public static void MeanMedianMode()
     {
 
@@ -81,7 +81,7 @@ static class HackerRankTrials
             Console.WriteLine("Its more than one");
 
         }
-  
+
         Console.WriteLine(mean);
         Console.WriteLine(median);
         Console.WriteLine(mode);
@@ -90,13 +90,13 @@ static class HackerRankTrials
 
     #endregion
 
-#region Valley-Counts
+    #region Valley-Counts
     public static int countingValleys()
     {
         //Just call the method to test.
         //You can change input for every case.
         //I tested the code for 100k and it works.
-        int steps = 1000000; 
+        int steps = 1000000;
         string path = "DUDUUUDUUUDDUDDUDUUDUDDUDDDUUUUUUDUDUDUDDUDDDUUUUUUDDUDUUUUUDUDUDDDUUDUDUDUDUUUUUUUUUUDUDDDDDDUDDDUDDDUDUUUUDDUUUD";
         path.Cast<char[]>();
         int currentHeight = 0;
@@ -106,7 +106,7 @@ static class HackerRankTrials
         for (int i = 0; i < path.Length; i++)
         {
 
-            
+
             switch (path[i])
             {
 
@@ -122,7 +122,7 @@ static class HackerRankTrials
             }
 
 
-            if (currentHeight == 0 && lastSeenHeight <0)
+            if (currentHeight == 0 && lastSeenHeight < 0)
             {
                 numOfValleys++;
             }
@@ -317,6 +317,49 @@ public static List<int> gradingStudents(List<int> grades)
 
 #endregion
 
+#region Migratory-Birds
+
+/*
+     * Complete the 'migratoryBirds' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     
+
+public static int migratoryBirds(List<int> arr)
+{
+    int[] birdTypeCounts = new int[5];
+
+    for (int i = 0; i < arr.Count; i++)
+    {
+        birdTypeCounts[arr[i] - 1]++;
+    }
+
+    var maxBirdTypeCount = birdTypeCounts[0];
+    var maxBirdType = 1;
+
+    for (int i = 1; i < 5; i++)
+    {
+        if (birdTypeCounts[i] > maxBirdTypeCount)
+        {
+            maxBirdTypeCount = birdTypeCounts[i];
+            maxBirdType = i + 1;
+        }
+
+        if (birdTypeCounts[i] == maxBirdTypeCount && i + 1 < maxBirdType)
+        {
+            maxBirdType = i + 1;
+        }
+
+    }
+
+    Console.WriteLine(maxBirdType);
+    return maxBirdType;
+
+}
+*/
+
+#endregion
 
 
 
