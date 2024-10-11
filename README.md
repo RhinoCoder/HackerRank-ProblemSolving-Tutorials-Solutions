@@ -5,3 +5,5 @@ Time Conversion |
 Grading Students |
 Mean-Median&Mode |
 SubArray Divison |
+Weighted Mean |
+
