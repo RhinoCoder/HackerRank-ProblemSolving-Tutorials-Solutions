@@ -12,7 +12,7 @@ static class HackerRankTrials
         //Call Your Method Between WriteLine and ReadKey.
         Console.WriteLine("Working.......");
 
-        MeanMedianMode();
+
 
         Console.ReadKey();
 
@@ -70,9 +70,9 @@ static class HackerRankTrials
         .OrderByDescending(g => g.Count)
         .ToList();
         int maxCount = 0;
-      
+
         maxCount = grouped.Max(g => g.Count);
-        Console.WriteLine("max count: " + maxCount); 
+        Console.WriteLine("max count: " + maxCount);
 
         if (maxCount == 1)
         {
@@ -88,11 +88,40 @@ static class HackerRankTrials
         Console.WriteLine(mean);
         Console.WriteLine(median);
         Console.WriteLine(mode);
-   
+
 
     }
 
     #endregion
+    #region Day0-Weighted-Mean
+
+    /*
+    * Complete the 'weightedMean' function below.
+    *
+    * The function accepts following parameters:
+    *  1. INTEGER_ARRAY X
+    *  2. INTEGER_ARRAY W
+    */
+
+    public static void weightedMean(List<int> X, List<int> W)
+    {
+        float weightedSum = 0;
+        float numbersInWeightVector = 0;
+
+        for (int i = 0; i < X.Count; i++)
+        {
+            weightedSum += (X[i] * W[i]);
+            numbersInWeightVector += W[i];
+        }
+
+
+        weightedSum = (weightedSum / numbersInWeightVector);
+        Console.WriteLine(weightedSum.ToString("0.0"));
+
+    }
+
+    #endregion
+
 
 
     #region Valley-Counts
