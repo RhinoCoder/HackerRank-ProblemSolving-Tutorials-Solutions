@@ -12,7 +12,7 @@ static class HackerRankTrials
         //Call Your Method Between WriteLine and ReadKey.
         Console.WriteLine("Working.......");
 
-
+        quartiles();
 
         Console.ReadKey();
 
@@ -122,9 +122,130 @@ static class HackerRankTrials
 
     #endregion
 
+    #region Day1-Quartiles
+    /*
+     * Complete the 'quartiles' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static List<int> quartiles()
+    {
+        List<int> arr = new List<int>();
+        arr.Add(3);
+        arr.Add(7);
+        arr.Add(8);
+        arr.Add(5);
+        arr.Add(12);
+        arr.Add(14);
+        arr.Add(21);
+        arr.Add(15);
+        arr.Add(18);
+        arr.Add(14);
+     
+
+        arr.Sort();
+        int q1 = 0;
+        int q2 = 0;
+        int q3 = 0;
+        int median = 0;
+        int midIndex = 0;
+
+        List<int> lowerHalf = new List<int>();
+        List<int> upperHalf = new List<int>();
+        List<int> quartileList = new List<int>();
+        midIndex = arr.Count / 2;
+
+        if ((arr.Count) % 2 == 0)
+        {
+
+            median = ((arr[midIndex] + arr[midIndex - 1]) / 2);
+            Console.WriteLine("Median appeared at even, Value: " + median);
+        }
+        else
+        {
+            median = arr[midIndex];
+            Console.WriteLine("Median appeared at odd, Value: " + median);
+        }
+
+        q2 = median;
 
 
-    #region Valley-Counts
+
+        for (int i = 0; i < arr.Count; i++)
+        {
+            if (arr[i] < median)
+            {
+                lowerHalf.Add(arr[i]);
+            }
+            else if (arr[i] > median)
+            {
+                upperHalf.Add(arr[i]);
+            }
+
+        }
+
+
+
+        //Debug purposes.    
+        for (int i = 0; i < lowerHalf.Count; i++)
+        {
+            Console.WriteLine("Lower Half: " + lowerHalf[i]);
+        }
+
+
+        if (lowerHalf.Count % 2 == 0)
+        {
+            int _middleIndex = lowerHalf.Count / 2;
+            q1 = ((lowerHalf[_middleIndex] + lowerHalf[_middleIndex - 1]) / 2);
+
+        }
+        else
+        {
+            int _middleIndex = (lowerHalf.Count / 2);
+            q1 = (lowerHalf[_middleIndex]);
+        }
+
+        for (int j = 0; j < upperHalf.Count; j++)
+        {
+            Console.WriteLine("Higher Half: " + upperHalf[j]);
+        }
+        if (upperHalf.Count % 2 == 0)
+        {
+            int _middleIndex = upperHalf.Count / 2;
+            q3 = ((upperHalf[_middleIndex] + upperHalf[_middleIndex - 1]) / 2);
+
+        }
+        else
+        {
+            int _middleIndex = upperHalf.Count / 2;
+            q3 = (upperHalf[_middleIndex]);
+        }
+
+
+        Console.WriteLine("Lower Half Count :" + lowerHalf.Count);
+        Console.WriteLine("Upper Half Count :" + upperHalf.Count);
+        Console.WriteLine("Q1: " + q1);
+        Console.WriteLine("Q2: " + q2);
+        Console.WriteLine("Q3: " + q3);
+
+        quartileList.Add(q1);
+        quartileList.Add(q2);
+        quartileList.Add(q3);
+
+
+        return quartileList;
+    }
+
+
+    #endregion
+
+
+
+
+
+#region Valley-Counts
     public static int countingValleys()
     {
         //Just call the method to test.
