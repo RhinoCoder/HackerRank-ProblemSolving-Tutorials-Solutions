@@ -12,7 +12,7 @@ static class HackerRankTrials
         //Call Your Method Between WriteLine and ReadKey.
         Console.WriteLine("Working.......");
 
-        interQuartile();
+        stdDev();
 
         Console.ReadKey();
 
@@ -21,7 +21,8 @@ static class HackerRankTrials
 
 
 
-    #region Day 0-Mean-Median-and-Mode
+//APPENDIX A: 10 Days of Statistics Solutions
+#region Day 0-Mean-Median-and-Mode
     public static void MeanMedianMode()
     {
 
@@ -92,8 +93,8 @@ static class HackerRankTrials
 
     }
 
-    #endregion
-    #region Day0-Weighted-Mean
+#endregion
+#region Day0-Weighted-Mean
 
     /*
     * Complete the 'weightedMean' function below.
@@ -120,15 +121,13 @@ static class HackerRankTrials
 
     }
 
-    #endregion
-
-    #region Day1-Quartiles
-    /*
-     * Complete the 'quartiles' function below.
-     *
-     * The function is expected to return an INTEGER_ARRAY.
-     * The function accepts INTEGER_ARRAY arr as parameter.
-     */
+#endregion
+#region Day1-Quartiles
+    ///
+    //  Complete the 'quartiles' function below.
+    //  The function is expected to return an INTEGER_ARRAY.
+    //  The function accepts INTEGER_ARRAY arr as parameter.
+    // 
 
     public static List<int> quartiles()
     {
@@ -240,15 +239,14 @@ static class HackerRankTrials
 
 
     #endregion
-
-    #region Day1-Inter-Quartile-Range
-    /*
-     * Complete the 'interQuartile' function below.
-     *
-     * The function accepts following parameters:
-     *  1. INTEGER_ARRAY values
-     *  2. INTEGER_ARRAY freqs
-     */
+#region Day1-Inter-Quartile-Range
+    
+     //* Complete the 'interQuartile' function below.
+     //*
+     //* The function accepts following parameters:
+     //*  1. INTEGER_ARRAY values
+     //*  2. INTEGER_ARRAY freqs
+     
 
     public static void interQuartile()
     {
@@ -389,6 +387,49 @@ static class HackerRankTrials
 
 
 
+    #region Day1-Standard-Deviation
+    /*
+     * Complete the 'stdDev' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void stdDev()
+    {
+        List<int> arr = new List<int>();
+        int[] testInput = new int[] { 6392, 51608, 71247, 14271, 48327, 50618, 67435, 47029, 61857, 22987, 64858, 99745, 75504, 85464, 60482, 30320, 11342, 48808, 66882, 40522 };
+
+        for(int i=0; i < testInput.Length; i++){arr.Add(testInput[i]);}
+ 
+        double mean = 0.0f;
+        double totalDifference = 0.0f; 
+       
+        for(int i=0; i < arr.Count; i++){mean += arr[i];}
+        mean /= arr.Count;
+ 
+        for (int i = 0; i < arr.Count; i++)
+        {
+            totalDifference += (Math.Pow((arr[i] - mean), 2)); 
+        }
+ 
+        totalDifference /= arr.Count;
+        double result = Math.Sqrt(totalDifference); 
+        Console.WriteLine("Mean: " + mean);
+        Console.WriteLine(result.ToString("0.0"));
+    }
+
+
+    #endregion
+
+
+
+
+
+
+
+
+
+    //Problem Solving Solutions.
     #region Valley-Counts
     public static int countingValleys()
     {
@@ -441,16 +482,16 @@ static class HackerRankTrials
 
 #endregion
 #region SubArray-Division
-/*
-     * Complete the 'birthday' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts following parameters:
-     *  1. INTEGER_ARRAY s
-     *  2. INTEGER d
-     *  3. INTEGER m
-     
 
+//*Complete the 'birthday' function below.
+//*
+//* The function is expected to return an INTEGER.
+//* The function accepts following parameters:
+//*1.INTEGER_ARRAY s
+//* 2.INTEGER d
+//* 3.INTEGER m
+
+/*
 public static int birthday(List<int> s, int d, int m)
 {
     int count = 0;
