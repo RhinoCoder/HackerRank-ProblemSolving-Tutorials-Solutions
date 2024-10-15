@@ -12,7 +12,7 @@ static class HackerRankTrials
         //Call Your Method Between WriteLine and ReadKey.
         Console.WriteLine("Working.......");
 
-        quartiles();
+        interQuartile();
 
         Console.ReadKey();
 
@@ -241,11 +241,155 @@ static class HackerRankTrials
 
     #endregion
 
+    #region Day1-Inter-Quartile-Range
+    /*
+     * Complete the 'interQuartile' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY values
+     *  2. INTEGER_ARRAY freqs
+     */
+
+    public static void interQuartile()
+    {
+        //Input of this function to work locally. I omit parameters.
+        //I include a one test case of the problem to verify the method.
+        //values:10 40 30 50 20 10 40 30 50 20
+        // 2 3 4 5 6 7 8 9 10
+        List<int> values = new List<int>();
+        values.Add(10);
+        values.Add(40);
+        values.Add(30);
+        values.Add(50);
+        values.Add(20);
+        values.Add(10);
+        values.Add(40);
+        values.Add(30);
+        values.Add(50);
+        values.Add(20);
+
+        List<int> freqs = new List<int>();
+        freqs.Add(1);
+        freqs.Add(2);
+        freqs.Add(3);
+        freqs.Add(4);
+        freqs.Add(5);
+        freqs.Add(6);
+        freqs.Add(7);
+        freqs.Add(8);
+        freqs.Add(9);
+        freqs.Add(10);
+
+
+        // Print your answer to 1 decimal place within this function
+        List<float> freqAddedList = new List<float>();
+        List<float> lowerHalf = new List<float>();
+        List<float> upperHalf = new List<float>();
+        float q1 = 0f;
+        float median = 0f;
+        float q3 = 0f;
+        float difference = 0.0f;
+
+
+
+        int counter = 0;
+
+        for (int i = 0; i < values.Count; i++)
+        {
+
+            for (int j = 0; j < freqs[i]; j++)
+            {
+                freqAddedList.Add(values[i]);
+                counter++;              
+               
+            }
+        }
+
+        Console.WriteLine("Work Count: " + counter);
+        freqAddedList.Sort();
+
+   
+
+
+        int _midIndex = (freqAddedList.Count) / 2;
+
+        if (freqAddedList.Count % 2 == 0)
+        {
+            median = (freqAddedList[_midIndex] + freqAddedList[_midIndex - 1]) / 2;
+        }
+        else
+        {
+            median = (freqAddedList[_midIndex]);
+
+        }
+
+        for (int i = 0; i < freqAddedList.Count; i++)
+        {
+            if (i < _midIndex)
+            {
+                lowerHalf.Add(freqAddedList[i]);
+            }
+            else if (i > _midIndex)
+            {
+                upperHalf.Add(freqAddedList[i]);
+            }
+
+        }
+
+
+        //Calculate Q1
+
+        int mid1 = lowerHalf.Count / 2;
+
+        if (lowerHalf.Count % 2 == 0)
+        {
+            q1 = ((lowerHalf[mid1] + lowerHalf[mid1 - 1]) / 2f);
+        }
+        else
+        {
+            q1 = lowerHalf[mid1];
+        }
+
+        //Calcualte Q3 
+
+        int mid2 = upperHalf.Count / 2;
+
+        if (upperHalf.Count % 2 == 0)
+        {
+            q3 = ((upperHalf[mid2] + upperHalf[mid2 - 1]) / 2f);
+        }
+        else
+        {
+            q3 = upperHalf[mid2];
+        }
+
+        difference = (q3 - q1);
+        Console.WriteLine(difference.ToString("0.0"));
+
+        //Debug Purposes.
+
+        foreach (var it in freqAddedList)
+        {
+            //Console.WriteLine("val: " + it);
+        }
+
+        Console.WriteLine("Lower Count: " + lowerHalf.Count);
+        Console.WriteLine("Upper Count: " + upperHalf.Count);
+        Console.WriteLine("Median: " + median);
+        Console.WriteLine("Q1: " + q1);
+        Console.WriteLine("Q3: " + q3);
+
+
+    }
 
 
 
 
-#region Valley-Counts
+    #endregion
+
+
+
+    #region Valley-Counts
     public static int countingValleys()
     {
         //Just call the method to test.
