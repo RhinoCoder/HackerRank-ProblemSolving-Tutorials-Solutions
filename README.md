@@ -15,4 +15,5 @@ Mean-Median&Mode |
 SubArray Divison |
 Weighted Mean |
 Quartile Day:1 |
+Inter Quartile Day:1|
 
