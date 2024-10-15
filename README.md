@@ -16,4 +16,5 @@ SubArray Divison |
 Weighted Mean |
 Quartile Day:1 |
 Inter Quartile Day:1|
+Standard Deviation Day:1 |
 
