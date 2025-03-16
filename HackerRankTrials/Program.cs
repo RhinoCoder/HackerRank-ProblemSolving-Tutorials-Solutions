@@ -3,18 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 //author@RhinoCoder & teatone.
-static class HackerRankTrials
+static class Program
 {
-
 
     static void Main()
     {
         //Call Your Method Between WriteLine and ReadKey.
-        Console.WriteLine("Working.......");
-
+        Console.WriteLine("Working.......\n");
         stdDev();
-
-        Console.ReadKey();
+        //Console.ReadKey();
 
     }
 
