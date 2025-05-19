@@ -13,6 +13,7 @@ static class HackerRankTrials
         Console.WriteLine("Working.......");
         //stdDev();
         Console.ReadKey();
+
     }
 
 
