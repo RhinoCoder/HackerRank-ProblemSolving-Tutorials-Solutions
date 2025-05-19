@@ -361,3 +361,26 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Rider IDE (JetBrains)
+.idea/
+*.sln.iml
+
+# VS Code settings (optional: uncomment to exclude editor settings)
+.vscode/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux & macOS hidden files
+*~
+
+# dotnet user secrets
+secrets.json
+
+# dotnet CLI artifacts
+*.runtimeconfig.dev.json
