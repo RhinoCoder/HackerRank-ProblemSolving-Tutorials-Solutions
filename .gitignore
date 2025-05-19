@@ -384,3 +384,8 @@ secrets.json
 
 # dotnet CLI artifacts
 *.runtimeconfig.dev.json
+
+*HackerRankTrials/obj
+HackerRankTrials/obj
+*HackerRankTrials/bin
+HackerRankTrials/bin

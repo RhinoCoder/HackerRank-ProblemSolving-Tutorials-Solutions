@@ -1,3 +1,6 @@
+
+![alt text](HackerRankTrials/obj/image.png)
+
 # My Approach For Solving a Problem
 
 -> First, I download the problem statement and carefully read it. I read about the desired  input/output relation. Then, I try to solve it with my own approach. This could take an hour to a few days. I push myself to struggle on the problem even if I do not have any idea. If no progress is made during that process, I try to google about the solutions to sub problems I create (Not for the whole solution!!) By this step I generally have 95% success rate. 
